@@ -4,8 +4,8 @@ This module helps you understand:
   -- the difference between PRINT and RETURN
 
 Authors: David Mutchler, Vibha Alangar, Matt Boutell, Dave Fisher, Mark Hays,
-         Aaron Wilkin, their colleagues, and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         Aaron Wilkin, their colleagues, and Mike Stevens.
+"""  # done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 ###############################################################################
 #
 # done: 1.
@@ -69,7 +69,7 @@ def distance(point):
 main()
 
 ###############################################################################
-# TODO: 2.
+# done: 2.
 #
 # READ the following, asking questions as needed.
 # When you believe that you understading what is says about UNIT TESTING,
