@@ -15,9 +15,9 @@ import m4t_tester
 
 def main():
     """ Calls the   TEST   functions in this module. """
-    run_test_sum_of_digits()
-    run_test_digits_in_cube()
-    run_test_digits_in_power()
+    # run_test_sum_of_digits()
+    # run_test_digits_in_cube()
+    # run_test_digits_in_power()
     run_test_fancy_sums_of_digits()
 
     # -------------------------------------------------------------------------
@@ -254,7 +254,7 @@ def digits_in_power(n, k):
       since 12 to the 3rd power is 1728 (whose digits sum to 18).
     """
     # -------------------------------------------------------------------------
-    # TODO: 6. Implement and test this function.
+    # done: 6. Implement and test this function.
     #
     ###########################################################################
     # IMPORTANT: CALL, as many times as needed,
@@ -278,6 +278,31 @@ def run_test_fancy_sums_of_digits():
     print('Testing the   fancy_sums_of_digits   function:')
     print('--------------------------------------------------')
 
+    # fancy sum Test 1:
+    expected = 1
+    answer = fancy_sums_of_digits(1)
+    print('fancy Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # fancy sum Test 2:
+    expected = 19084
+    answer = fancy_sums_of_digits(2)
+    print('fancy Test 2 expected:', expected)
+    print('       actual:  ', answer)
+
+    # fancy sum Test 3:
+    expected = 124309
+    answer = fancy_sums_of_digits(35)
+    print('fancy Test 3 expected:', expected)
+    print('       actual:  ', answer)
+
+
+def fancy_sums_of_digits(n):
+    x = sum_of_digits (n ** 1000)
+    y = sum_of_digits (n ** 999)
+    answer = sum_of_digits(x**y)
+    return answer
+
     # -------------------------------------------------------------------------
     # HINT:  For your 1st test, consider  n=10.  Figure out BY HAND
     # the correct (expected) answer for that test case.  (It's easy.)
@@ -286,39 +311,39 @@ def run_test_fancy_sums_of_digits():
     # in the doc-string to be sure that you understand the specification.
     # -------------------------------------------------------------------------
 
-
-def fancy_sums_of_digits(n):
-    """
-    What comes in:  A positive integer n.
-    What goes out:
-      -- Let X denote the   sum   of the digits in (n ** 1000).
-      -- Let Y denote the   sum   of the digits in (n ** 999).
-      This function RETURNs the sum of the digits in (X ** Y).
-    Side effects:   None.
-    Examples:
-      -- If n is 2, then:
-            -- the   sum   of the digits in n ** 1000 is 1366 (trust me!).
-            -- the   sum   of the digits in n ** 999 is 1367 (trust me!).
-            -- so X ** Y is VERY LARGE in this case
-                     (don't try to print it!)
-            -- the   sum   of the digits in (X ** Y) is 19084 (trust me!)
-            -- so this function returns 19084.
-      -- If n is 35, then:
-            -- the sum of the digits in n ** 1000 is 7021 (trust me!).
-            -- the sum of the digits in n ** 999 is 7145 (trust me!).
-            -- so X ** Y is VERY LARGE in this case
-                     (don't try to print it!)
-            -- the sum of the digits in (X ** Y) is 124309 (trust me!)
-            -- so this function returns 124309.
-    """
-    # -------------------------------------------------------------------------
-    # TODO: 8. Implement and test this function.
-    #
-    ###########################################################################
-    # IMPORTANT: CALL, as many times as needed,
-    #    the    sum_of_digits    function that is DEFINED ABOVE.
-    ###########################################################################
-    # -------------------------------------------------------------------------
+#
+# def fancy_sums_of_digits(n):
+#     """
+#     What comes in:  A positive integer n.
+#     What goes out:
+#       -- Let X denote the   sum   of the digits in (n ** 1000).
+#       -- Let Y denote the   sum   of the digits in (n ** 999).
+#       This function RETURNs the sum of the digits in (X ** Y).
+#     Side effects:   None.
+#     Examples:
+#       -- If n is 2, then:
+#             -- the   sum   of the digits in n ** 1000 is 1366 (trust me!).
+#             -- the   sum   of the digits in n ** 999 is 1367 (trust me!).
+#             -- so X ** Y is VERY LARGE in this case
+#                      (don't try to print it!)
+#             -- the   sum   of the digits in (X ** Y) is 19084 (trust me!)
+#             -- so this function returns 19084.
+#       -- If n is 35, then:
+#             -- the sum of the digits in n ** 1000 is 7021 (trust me!).
+#             -- the sum of the digits in n ** 999 is 7145 (trust me!).
+#             -- so X ** Y is VERY LARGE in this case
+#                      (don't try to print it!)
+#             -- the sum of the digits in (X ** Y) is 124309 (trust me!)
+#             -- so this function returns 124309.
+#     """
+#     # -------------------------------------------------------------------------
+#     # TODO: 8. Implement and test this function.
+#     #
+#     ###########################################################################
+#     # IMPORTANT: CALL, as many times as needed,
+#     #    the    sum_of_digits    function that is DEFINED ABOVE.
+#     ###########################################################################
+#     # -------------------------------------------------------------------------
 
 # -----------------------------------------------------------------------------
 # Calls  main  to start the ball rolling.
