@@ -190,7 +190,7 @@ def digits_in_cube(n):
       this function returns (1 + 2 + 5), which is 8.
     """
     # -------------------------------------------------------------------------
-    # TODO: 4. Implement and test this function.
+    # done: 4. Implement and test this function.
     #   Note that you should write its TEST function first (above).
     #   That is called TEST-DRIVEN DEVELOPMENT (TDD).
     #
@@ -204,7 +204,7 @@ def digits_in_cube(n):
 def run_test_digits_in_power():
     """ Tests the   digits_in_power   function. """
     # -------------------------------------------------------------------------
-    # TODO: 5. Implement this function.
+    # done: 5. Implement this function.
     #   It TESTS the  digits_in_power  function defined below.
     #   Include at least **   3   ** tests.
     #
@@ -215,9 +215,35 @@ def run_test_digits_in_power():
     print('Testing the   digits_in_power   function:')
     print('--------------------------------------------------')
 
+    # Digits in power Test 1:
+    expected = 9
+    answer = digits_in_power(3,3)
+    print('DIP Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # DIP Test 2:
+    expected = 13
+    answer = digits_in_power(4,4)
+    print('DIP Test 1 expected:', expected)
+    print('       actual:  ', answer)
+
+    # DIP Test 3:
+    expected = 13
+    answer = digits_in_power(2,8)
+    print('DIP Test 1 expected:', expected)
+    print('       actual:  ', answer)
 
 def digits_in_power(n, k):
-    """
+    answer = n**k
+    sum = sum_of_digits(answer)
+    return sum
+
+
+
+
+
+
+"""
     What comes in:  Two positive integers, n and k.
     What goes out:
       The sum of the digits in x, where x is n raised to the kth power.
